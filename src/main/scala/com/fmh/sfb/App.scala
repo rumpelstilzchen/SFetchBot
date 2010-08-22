@@ -33,7 +33,7 @@ object App extends PircBot{
   var xdcc_server: String = ""
 
   def main(args: Array[String]) {
-    if(args exists (_=="--help" || _=="-h")) {
+    if(args exists (x=>x=="-h"||x=="--help")) {
       println("usage: java -jar SFetchBot-<version>.jar <nick> <irc_server> <channel> <xdcc_server> <from> <to>"+
               "\nNOTE: since channel contains a # sign, you have to put it in \" (like \"#arigatou\"")
       System exit 0
